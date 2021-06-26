@@ -59,6 +59,6 @@ if __name__ == "__main__":
     nuc = np.load('data/nuc.npz')['arr_0']
     st = []
     for i in nuc:
-        if detect_touch(i>0.1, thres_angle=160, edgelen=5):
+        if detect_touch(i>0.1, thres_angle=170, edgelen=5):
             st.append(i)
     imsave('data/outliers.png', np.concatenate(st).T)
